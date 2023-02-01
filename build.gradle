@@ -1,0 +1,76 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.jmockit:jmockit:1.49'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.google.code.gson:gson:2.8.7'
+}
+
+test {
+    useJUnitPlatform()
+    ignoreFailures = true
+    finalizedBy jacocoTestReport
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'com.example.ApplicationKt'
+    }
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoReport')
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/Main**', '**/InputHandler**', '**/InformationDisplayer**'])
+        }))
+    }
+}
+
+run{
+    standardInput = System.in
+}
+
+application {
+    mainClass = 'Main'
+}
+
+task resetDatabase(type: Copy) {
+    from('.') {
+        include 'giftCardsBackup.json'
+        include 'userDatabaseBackup.json'
+        rename 'userDatabaseBackup.json', 'userDatabase.json'
+        rename 'giftCardsBackup.json', 'giftCards.json'
+    }
+    into '.'
+}
+
+task resetDatabase2(type: Copy, dependsOn: resetDatabase) {
+    from('/src') {
+        include 'CinemaBackup.json'
+
+        rename 'CinemaBackup.json', 'Cinema.json'
+    }
+    into '/src'
+}
+clean.finalizedBy resetDatabase, resetDatabase2

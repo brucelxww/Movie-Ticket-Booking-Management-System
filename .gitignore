@@ -1,0 +1,12 @@
+.project
+.settings
+.gradle
+build
+.idea
+.vscode
+bin
+gradle
+gradlew
+gradlew.bat
+.DS_Store
+.classpath

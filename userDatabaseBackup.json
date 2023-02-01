@@ -1,0 +1,16 @@
+{
+  "userDetails": {
+    "Ted": "12345",
+    "Bob": "12345",
+    "Fred": "12345",
+    "greg": "12345"
+  },
+
+  "staffDetails": {
+    "Martin": "12345"
+  },
+
+  "managerDetails": {
+    "Tod": "12345"
+  }
+}
