@@ -1,0 +1,21 @@
+{
+
+  "_LAYOUT OF MOVIES IN EACH CINEMA_": "Movie name: [Date of showing | Start time | End time | Price in aud]",
+
+  "cinemas": {
+    "Hoyts Thatswood": {
+      "Lord of the Circles": [["26/12/2021", "14:00", "17:00", "16.00", "Gold", "0", "200", "0"], ["26/12/2021", "18:00", "20:00", "16.00", "Silver", "0", "200", "0"]],
+      "Your Lastname": [["24/11/2021", "18:00", "21:00", "16.00", "Silver","0", "200", "0"]]
+    },
+
+    "Hoyts Garfield": {
+      "Lord of the Circles": [["26/12/2021", "14:00", "17:00", "16.00", "Gold", "0", "200", "0"]],
+      "Octopus Game": [["17/11/2021", "17:00", "19:00", "14.00", "Bronze", "0", "200", "0"]]
+    },
+
+    "Hoyts Downtown": {
+      "Octopus Game": [["17/11/2021", "13:00", "15:00", "14.00", "Bronze", "0", "200", "0"]],
+      "Your Lastname": [["24/11/2021", "08:30", "11:30", "15.00", "Silver","0", "200", "0"]]
+    }
+  }
+}

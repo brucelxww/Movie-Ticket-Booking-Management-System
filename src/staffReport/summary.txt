@@ -1,0 +1,27 @@
+
+    Title: Your Lastname
+    Screen size: Silver
+    Date: 24/11/2021
+    Starting time: 18:00
+    End time: 21:00
+    Bookings: 0
+    Available seats: 200
+    Booked seats: 0
+
+    Title: Lord of the Circles
+    Screen size: Gold
+    Date: 26/12/2021
+    Starting time: 14:00
+    End time: 17:00
+    Bookings: 1
+    Available seats: 198
+    Booked seats: 2
+
+    Title: Lord of the Circles
+    Screen size: Silver
+    Date: 26/12/2021
+    Starting time: 18:00
+    End time: 20:00
+    Bookings: 0
+    Available seats: 200
+    Booked seats: 0

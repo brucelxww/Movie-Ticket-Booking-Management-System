@@ -1,0 +1,39 @@
+{
+  "movies": {
+    "Lord of the Circles": {
+      "duration": 3,
+      "cast": [
+        "Someone",
+        "Someone else"
+      ],
+      "release_date": "26/12/2001",
+      "director": "director1",
+      "available": true,
+      "synopsis": "synopsis1",
+      "classification": "M"
+    },
+    "Octopus Game": {
+      "duration": 2,
+      "cast": [
+        "Me"
+      ],
+      "release_date": "17/09/2021",
+      "director": "director3",
+      "name": "Octopus Game",
+      "available": true,
+      "synopsis": "synopsis3",
+      "classification": "MA15+"
+    },
+    "Your Lastname": {
+      "duration": 3,
+      "cast": [
+        "Some guy"
+      ],
+      "release_date": "24/11/2016",
+      "director": "director2",
+      "available": false,
+      "synopsis": "synopsis2",
+      "classification": "G"
+    }
+  }
+}

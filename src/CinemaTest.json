@@ -1,0 +1,11 @@
+{
+  "cinemas": {
+    "Hoyts Thatswood": {
+      "Lord of the Circles": [["26/12/2001", "2:00pm", "5:00pm", "16.00"], ["26/12/2001", "2:00pm", "5:00pm", "16.00"]],
+    },
+
+    "Hoyts Garfield": {
+      "Octopus Game": [["17/9/2021", "5:00pm", "7:00pm", "14.00"]]
+    }
+  }
+}
